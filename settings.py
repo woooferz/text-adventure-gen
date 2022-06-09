@@ -2,6 +2,7 @@ import json
 
 
 VERSION = "v0.1 alpha"
+VERSION_ID = 1
 SETTINGS_FILE = "settings.json"
 
 try:

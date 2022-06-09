@@ -5,6 +5,12 @@ init(autoreset=True)
 
 conf = settings.SETTINGS
 version = settings.VERSION
+version_id = settings.VERSION_ID
+game_versions_id = conf['settings']['versions_supported']
+
+if not version_id in game_versions_id:
+    print(Fore.RED + "Unsupported Version Installed for that Text Adventure")
+    exit(1)
 
 if conf['settings']['credit']:
     print(f"Text Adventure Generator {version} by Wooferz")
@@ -56,4 +62,10 @@ def run_scenario(scenario):
     run_scenario(scenario['children'][int(inp)-1])
 
 
-run_scenario(conf["game"])
+try:
+    run_scenario(conf["game"])
+except KeyboardInterrupt:
+    print(colour_text("[red]Exiting..."))
+    exit()
+except KeyError:
+    print(colour_text("[red]Something went wrong in the config, probably."))
