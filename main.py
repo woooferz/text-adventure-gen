@@ -17,14 +17,20 @@ else:
     print(conf['settings']['title'], "by", conf['settings']['author'])
 
 
+def colour_text(text):
+    text = text.replace("[red]", Fore.RED).replace("[blue]", Fore.BLUE).replace(
+        "[green]", Fore.GREEN).replace("[yellow]", Fore.YELLOW).replace("[reset]", Fore.RESET + Back.RESET + Style.RESET_ALL)
+    return text
+
+
 def space():
     print("\n")
 
 
 def run_scenario(scenario):
-    print(scenario['text'])
     space()
-
+    print(colour_text(scenario['text']))
+    space()
     try:
         scenario['children']
     except KeyError:
@@ -32,7 +38,7 @@ def run_scenario(scenario):
 
     a = 1
     for i in scenario['children']:
-        print(f"{a}. {i['option_text']}")
+        print(colour_text(f"{a}. {i['option_text']}"))
         a += 1
     space()
     while True:
