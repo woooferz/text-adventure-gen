@@ -1,0 +1,100 @@
+{
+    "settings": {
+        "credit": false,
+        "title": "My Text Adventure",
+        "author": "Wooferz",
+        "versions_supported": [1]
+    },
+    "game": {
+        "text": "You see a [yellow]waffle[reset], what do you do?",
+        "option_text": false,
+        "children": [{
+            "text": "You ate the waffle, it was good",
+            "option_text": "Eat it",
+            "children": [{
+                "text": "You went outside the house, you see a dock.",
+                "option_text": "Go out the house",
+                "children": [
+                    {
+                        "text": "You went to the dock and saw a man and a boat",
+                        "option_text": "Go to the dock",
+                        "children": [
+                            {
+                                "text": "You talked to the man\nThe Conversation:\n[YOU] I love waffles\n[HIM] I want to kill someone\n[YOU] Ok",
+                                "option_text": "Talk to man",
+                                "children": [
+                                    {
+                                        "option_text": "Run away",
+                                        "text": "You ran away and into a forest",
+                                        "children": [
+                                            {
+                                                "option_text": "Explore Foreset",
+                                                "text": "You explore the forest and see the Waffle God",
+                                                "children": [
+                                                    {
+                                                        "text": "You speak to the Waffle God, and he gives you 5 golden waffles.",
+                                                        "option_text": "Speak to the god"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "option_text": "Stay still and do nothing",
+                                        "text": "You stood still and he killed you\n\n[red]You died"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "You ignored the man and boarded the boat\nYou see an island in the distance",
+                                "option_text": "Ignore the man, and board the boat.",
+                                "children": [
+                                    {
+                                        "option_text": "Sail to the island",
+                                        "text": "Sailing to the island took 2 hours\nYou have no food\nYou see a banana tree\n",
+                                        "children": [
+                                            {
+                                                "option_text": "Go to tree and eat some bananas",
+                                                "text": "While going to the tree you tripped on a rock\nYou are injured",
+                                                "children": [
+                                                    {
+                                                        "option_text": "Stand up and walk it of",
+                                                        "text": "You stood up, and you are fine."
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "option_text": "Do nothing",
+                                                "text": "You did nothing and ended up dying of hunger\n\n[red]You died"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "You stayed in the house and played Waffle: The Game\nYou start feeling more hungry.",
+                "option_text": "Stay in house and play game",
+                "children": [
+                    {
+                        "text": "You ate food.",
+                        "option_text": "Eat food"
+                    },
+                    {
+                        "option_text": "Don't eat food and continue playing",
+                        "text": "You didn't eat food"
+                    }
+                ]
+            }
+        ]
+        },
+        {
+            "text": "You Ignored The Waffle, you died of hunger\n\n[red]You died",
+            "option_text": "Ignore the waffle"
+        }
+    ]
+    }
+}
