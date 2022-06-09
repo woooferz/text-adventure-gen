@@ -1,6 +1,6 @@
 import settings
 from colorama import Fore, Back, Style, init
-
+#
 init(autoreset=True)
 
 conf = settings.SETTINGS
