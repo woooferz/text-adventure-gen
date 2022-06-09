@@ -1,6 +1,6 @@
 {
     "settings": {
-        "credit": false,
+        "credit": true,
         "title": "My Text Adventure",
         "author": "Wooferz",
         "versions_supported": [1]
