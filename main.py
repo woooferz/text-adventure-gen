@@ -65,7 +65,8 @@ def run_scenario(scenario):
 try:
     run_scenario(conf["game"])
 except KeyboardInterrupt:
-    print(colour_text("[red]Exiting..."))
+    print(colour_text("\n\n[red]Exiting..."))
     exit()
 except KeyError:
-    print(colour_text("[red]Something went wrong in the config, probably."))
+    print(colour_text(
+        "[red]Something went wrong in the config, probably."))
