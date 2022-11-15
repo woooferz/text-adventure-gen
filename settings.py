@@ -1,9 +1,9 @@
 import json
 
 
-VERSION = "v0.1 alpha"
-VERSION_ID = 1
-SETTINGS_FILE = "settings.json"
+VERSION = "v0.2"
+VERSION_ID = 2
+SETTINGS_FILE = "settings.example.json"
 
 try:
     with open(SETTINGS_FILE, "r") as f:
